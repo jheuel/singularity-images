@@ -1,0 +1,8 @@
+Bootstrap: docker
+From: gitlab-registry.cern.ch/lhcb-core/lbdocker/slc6-build
+
+%post
+    mkdir -p /cvmfs
+
+%environment
+    export PATH=/cvmfs/lhcb.cern.ch/lib/:$PATH
